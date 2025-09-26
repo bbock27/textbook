@@ -1474,14 +1474,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1912334386}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84587a758ef79704e89aba0b659109c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 50f055dc0b86c31fab2588992a6925e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 3422694874358860362, guid: 64addd483e18a04468e13842ea047756,
     type: 3}
   startTime: 0
-  endTime: 5
-  spawnRate: 0.5
+  endTime: 10
+  spawnRate: 1
 --- !u!1 &1998630687
 GameObject:
   m_ObjectHideFlags: 0

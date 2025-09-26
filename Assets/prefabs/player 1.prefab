@@ -327,12 +327,18 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5172649781648289818, guid: 2a1e1549c80a9dc47a03895999e2d3fc,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6669453499536115168}
+      addedObject: {fileID: 465218234297609554}
     - targetCorrespondingSourceObject: {fileID: 5172649781648289818, guid: 2a1e1549c80a9dc47a03895999e2d3fc,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8033850836572101229}
+      addedObject: {fileID: 592113771414285435}
   m_SourcePrefab: {fileID: 100100000, guid: 2a1e1549c80a9dc47a03895999e2d3fc, type: 3}
+--- !u!1 &2619825000570175507 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4507790874165416462, guid: 2a1e1549c80a9dc47a03895999e2d3fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1933626573014749725}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6209508953251430034 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5546469234112228495, guid: 2a1e1549c80a9dc47a03895999e2d3fc,
@@ -345,7 +351,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1933626573014749725}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6669453499536115168
+--- !u!114 &465218234297609554
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -354,12 +360,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6709640574311932423}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 638d953ffa7adf243880d8864945506d, type: 3}
+  m_Script: {fileID: 11500000, guid: e2fafe0f021691610a041984722aad80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3.87
-  rotateSpeed: 8.32
---- !u!114 &8033850836572101229
+  speed: 1.62
+  rotateSpeed: 270.5
+--- !u!114 &592113771414285435
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -368,9 +374,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6709640574311932423}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be60f37d4cfe7f84ba9a933530c68baf, type: 3}
+  m_Script: {fileID: 11500000, guid: dcae1c5843b8c0855905e5a93a218474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 679977601598664129, guid: 359b46d2bb4027c448de14fccf8a1109,
     type: 3}
-  spawnLoaction: {fileID: 1735860776397815626}
+  spawnLoaction: {fileID: 2619825000570175507}
