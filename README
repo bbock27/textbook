@@ -1,6 +1,9 @@
-To test, open the scene labeled scene1 and hit the 
+To test, open the scene labeled main and hit the 
 play button in the unity editer. 
 
 WASD to move
 left click = shoot
 mouse X = rotate
+
+
+a green screen indicates a win and a red indicates you lost
