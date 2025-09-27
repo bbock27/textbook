@@ -68,11 +68,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightSensor: {fileID: 5276076453733184312}
   baseTransform: {fileID: 0}
-  baseAttackDistance: 1
-  playerAttackDistance: 1
-  bulletPrefab: {fileID: 0}
+  baseAttackDistance: 4
+  playerAttackDistance: 2
+  bulletPrefab: {fileID: 3892562277137984938, guid: daf7d85a9c6c9fc2a8736d3d376fb85e,
+    type: 3}
   lastShootTime: 0
-  fireRate: 0
+  fireRate: 2
   currentState: 0
 --- !u!1 &4507790874165416462
 GameObject:

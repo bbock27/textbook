@@ -31,13 +31,7 @@ public class EnemyFSM : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (currentState == EnemyState.GoToBase)
-        {
-            GoToBase();
-        }
-        else if(currentState == EnemyState.AttackBase){AttackBase();}
-        else if(currentState == EnemyState.ChasePlayer){ ChasePlayer();}
-        else{AttackPlayer();}
+        currentState = EnemyState.GoToBase;
     }
 
     void GoToBase()
@@ -127,7 +121,13 @@ public class EnemyFSM : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (currentState == EnemyState.GoToBase)
+        {
+            GoToBase();
+        }
+        else if(currentState == EnemyState.AttackBase){AttackBase();}
+        else if(currentState == EnemyState.ChasePlayer){ ChasePlayer();}
+        else{AttackPlayer();}
     }
 
     public void OnDrawGizmos()

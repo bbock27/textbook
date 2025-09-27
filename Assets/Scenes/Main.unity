@@ -1640,7 +1640,7 @@ Transform:
   m_GameObject: {fileID: 1912334386}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.6, y: -2.68, z: -10.06}
+  m_LocalPosition: {x: -3.6, y: -1.69, z: -10.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1671,6 +1671,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2795819407491860771, guid: 2a1e1549c80a9dc47a03895999e2d3fc,
+        type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 3892562277137984938, guid: daf7d85a9c6c9fc2a8736d3d376fb85e,
+        type: 3}
     - target: {fileID: 2795819407491860771, guid: 2a1e1549c80a9dc47a03895999e2d3fc,
         type: 3}
       propertyPath: baseAttackDistance
