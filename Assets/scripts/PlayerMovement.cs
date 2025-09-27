@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     public float rotateSpeed;
     private Vector2 movementValue;
     private float lookValue;
+    
+    private Rigidbody rb;
 
 
     // Start is called before the first frame update
@@ -17,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        rb = GetComponent<Rigidbody>();
     }
 
     public void OnMove(InputValue value){
@@ -25,7 +28,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnLook(InputValue value){
         lookValue = value.Get<Vector2>().x * rotateSpeed;
-        print(lookValue);
     }
 
     // Update is called once per frame
@@ -39,8 +41,12 @@ public class PlayerMovement : MonoBehaviour
         // float mouseX = Input.GetAxis("Mouse X");
         // transform.Rotate(0,mouseX * rotateSpeed*Time.deltaTime,0);
 
-        transform.Translate(movementValue.x * Time.deltaTime, 0, movementValue.y * Time.deltaTime);
-        transform.Rotate(0,lookValue * Time.deltaTime, 0);
+        // transform.Translate(movementValue.x * Time.deltaTime, 0, movementValue.y * Time.deltaTime);
+        // transform.Rotate(0,lookValue * Time.deltaTime, 0);
+        rb.AddRelativeForce(movementValue.x * Time.deltaTime, 0, movementValue.y * Time.deltaTime);
+        rb.AddRelativeTorque(0, lookValue * Time.deltaTime, 0);
+        
+        
     }
 
     

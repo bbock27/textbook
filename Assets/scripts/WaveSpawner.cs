@@ -13,14 +13,21 @@ public class WaveSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        WavesManager.instance.AddWave(this);
         InvokeRepeating("Spawn", startTime, spawnRate);
-        Invoke("CancelInvoke", endTime);
+        Invoke("EndSpawner", endTime);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    void EndSpawner()
+    {
+        WavesManager.instance.RemoveWave(this);
+        CancelInvoke();
     }
 
     void Spawn(){
