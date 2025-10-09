@@ -9,6 +9,8 @@ public class WavesGameMode : MonoBehaviour
     [SerializeField] private Life playerLife;
 
     [SerializeField] private Life playerBaseLife;
+
+    private bool lost = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,10 @@ public class WavesGameMode : MonoBehaviour
     // Update is called once per frame
     void CheckWinCondition()
     {
+        if (lost)
+        {
+            return;
+        }
         if (EnemiesManager.instance.enemies.Count <= 0 &&
             WavesManager.instance.waves.Count <= 0)
         {
@@ -43,5 +49,6 @@ public class WavesGameMode : MonoBehaviour
     void OnPlayerOrBaseDied()
     {
         SceneManager.LoadScene("LoseScene");
+        lost = true;
     }
 }
