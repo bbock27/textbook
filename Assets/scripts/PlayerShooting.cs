@@ -7,6 +7,7 @@ public class PlayerShooting : MonoBehaviour
 
     public GameObject bulletPrefab;
     public GameObject spawnLoaction;
+    public ParticleSystem muzzleFlash;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,5 +24,6 @@ public class PlayerShooting : MonoBehaviour
 
     public void OnFire(){
         GameObject clone = Instantiate(bulletPrefab, spawnLoaction.transform.position, spawnLoaction.transform.rotation);
+        muzzleFlash.Play();
     }
 }

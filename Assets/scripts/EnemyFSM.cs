@@ -13,6 +13,8 @@ public class EnemyFSM : MonoBehaviour
     public Transform baseTransform;
     public float baseAttackDistance = 1;
     public float playerAttackDistance = 1;
+    
+    public ParticleSystem muzzleFlash;
 
     [SerializeField] private GameObject bulletPrefab;
 
@@ -36,7 +38,7 @@ public class EnemyFSM : MonoBehaviour
 
     void GoToBase()
     {
-        Debug.Log("going to base state");
+        // Debug.Log("going to base state");
         if (sightSensor.detectedObject != null)
         {
             currentState = EnemyState.ChasePlayer;
@@ -54,7 +56,7 @@ public class EnemyFSM : MonoBehaviour
 
     void AttackBase()
     {
-        Debug.Log("attacking base");
+        // Debug.Log("attacking base");
         agent.isStopped = true;
         LookTo(baseTransform.position);
         Shoot();
@@ -63,7 +65,7 @@ public class EnemyFSM : MonoBehaviour
     void ChasePlayer()
     {
         agent.isStopped = false;
-        Debug.Log("chasing player");
+        // Debug.Log("chasing player");
         if (sightSensor.detectedObject == null)
         {
             currentState = EnemyState.GoToBase;
@@ -82,7 +84,7 @@ public class EnemyFSM : MonoBehaviour
 
     void AttackPlayer()
     {
-        Debug.Log("attacking player");
+        // Debug.Log("attacking player");
         agent.isStopped = true;
         if (sightSensor.detectedObject == null)
         {
@@ -109,6 +111,7 @@ public class EnemyFSM : MonoBehaviour
             lastShootTime = Time.time;
             Instantiate(bulletPrefab, transform.position, transform.rotation);
         }
+        muzzleFlash.Play();
     }
 
     void LookTo(Vector3 target)
