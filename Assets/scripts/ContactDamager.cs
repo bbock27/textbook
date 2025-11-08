@@ -25,7 +25,7 @@ public class ContactDamager : MonoBehaviour
         if (life != null)
         {
             life.amount -= damage;
-            Debug.Log("damage dealt to", other.gameObject);
+            // Debug.Log("damage dealt to", other.gameObject);
         }
     }
 }

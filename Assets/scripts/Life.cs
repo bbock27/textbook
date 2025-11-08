@@ -6,7 +6,8 @@ using UnityEngine.Events;
 public class Life : MonoBehaviour
 {
 
-    public float amount = 10;
+    public float amount = 100;
+    public float maxHealth = 100;
     public UnityEvent onDeath;
     // Start is called before the first frame update
     void Start()

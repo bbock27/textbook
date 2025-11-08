@@ -24,11 +24,13 @@ public class EnemyFSM : MonoBehaviour
 
     public EnemyState currentState = EnemyState.GoToBase;
     private NavMeshAgent agent;
+    Animator animator;
 
     void Awake()
     {
         baseTransform = GameObject.Find("Base").transform;
         agent = GetComponentInParent<NavMeshAgent>();
+        animator = GetComponentInParent<Animator>();
     }
     // Start is called before the first frame update
     void Start()
@@ -38,6 +40,7 @@ public class EnemyFSM : MonoBehaviour
 
     void GoToBase()
     {
+        animator.SetBool("Shooting", false);
         // Debug.Log("going to base state");
         if (sightSensor.detectedObject != null)
         {
@@ -64,6 +67,7 @@ public class EnemyFSM : MonoBehaviour
 
     void ChasePlayer()
     {
+        animator.SetBool("Shooting", false);
         agent.isStopped = false;
         // Debug.Log("chasing player");
         if (sightSensor.detectedObject == null)
@@ -105,6 +109,7 @@ public class EnemyFSM : MonoBehaviour
 
     void Shoot()
     {
+        animator.SetBool("Shooting", true);
         var timeSinceLastShoot = Time.time - lastShootTime;
         if (timeSinceLastShoot > fireRate)
         {
