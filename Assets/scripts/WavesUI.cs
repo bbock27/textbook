@@ -12,6 +12,7 @@ public class WavesUI : MonoBehaviour
     {
         text = GetComponent<TMP_Text>();
         WavesManager.instance.onChanged.AddListener(RefreshText);
+        RefreshText();
     }
 
     // Update is called once per frame
